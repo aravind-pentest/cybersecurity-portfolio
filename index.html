@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aravind V | Cybersecurity Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a0f0d;
+      --fg: #c7f9cc;
+      --primary: #00ff90;
+      --card: #101d1a;
+      --grid-bg: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><rect width="20" height="20" fill="none" stroke="%2300ff90" stroke-width="0.3" /></svg>');
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'JetBrains Mono', monospace;
+      background-color: var(--bg);
+      background-image: var(--grid-bg);
+      background-size: 20px 20px;
+      color: var(--fg);
+      line-height: 1.6;
+    }
+    nav {
+      background-color: var(--card);
+      padding: 15px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    nav a {
+      color: var(--primary);
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #b8ffcc;
+      text-shadow: 0 0 5px var(--primary);
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
+    header h1 {
+      font-size: 2.5em;
+      color: var(--primary);
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      word-wrap: break-word;
+    }
+    section {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background: var(--card);
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 255, 144, 0.2);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .project {
+      margin-bottom: 30px;
+      padding: 15px;
+      background-color: var(--bg);
+      border-left: 5px solid var(--primary);
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 12px var(--primary);
+    }
+    .resume-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: var(--primary);
+      color: var(--bg);
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 0 10px var(--primary);
+    }
+    .resume-button:hover {
+      box-shadow: 0 0 18px var(--primary);
+    }
+    #scrollTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 99;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      background-color: var(--primary);
+      color: var(--bg);
+      cursor: pointer;
+      padding: 10px 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px var(--primary);
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: var(--fg);
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header>
+    <h1>Aravind V</h1>
+    <p>Cybersecurity Enthusiast | Ethical Hacker | Web App Defender</p>
+  </header>
+
+  <section id="about">
+    <h2>🧑 About Me</h2>
+    <p>I'm a B.E. Computer Science graduate passionate about cybersecurity and ethical hacking. With hands-on experience in vulnerability assessment and penetration testing, I specialize in identifying security flaws and helping secure web applications and network systems.</p>
+  </section>
+
+  <section id="skills">
+    <h2>🛠️ Technical Skills</h2>
+    <ul>
+      <li>Web Application Security – OWASP Top 10</li>
+      <li>Burp Suite, Nmap, Wireshark, CyberChef</li>
+      <li>Firewall Setup – Layer 4, NGFW, WAF</li>
+      <li>IDS/IPS Systems, Network Traffic Analysis</li>
+      <li>Linux (Kali), Terminal Commands, Bash Scripting</li>
+      <li>Python, SQLMap, Nessus, Metasploit (basic)</li>
+        <li><strong>🔗 GitHub:</strong> <a href="https://github.com/aravind-pentest/web-vuln-scanner.git" target="_blank">View Project</a></li>
+  </section>
+
+  <section id="projects">
+    <h2>📁 Projects</h2>
+
+    <div class="project">
+      <h3>💉 SQL Injection Analysis – Web App Penetration Testing</h3>
+      <ul>
+        <li>Discovered SQL Injection vulnerability in a custom-built login form</li>
+        <li>Performed login bypass using <code>' OR '1'='1</code> payload</li>
+        <li>Used SQLMap to extract backend database structure and data</li>
+        <li>Captured HTTP request/response using Burp Suite</li>
+        <li>Documented findings and suggested remediation steps</li>
+        <li><strong>🔗 GitHub:</strong> <a href="https://github.com/aravind-pentest/Web-Application-Penetration-Testing-SQL-Injection-Analysis" target="_blank">View Project</a></li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>🛡 Web Vulnerability Scanner (Internship Project)</h3>
+      <ul>
+        <li>I created a Python-based scanner with a Flask UI to find web vulnerabilities</li>
+        <li>Tool detects XSS, SQLi, CSRF via manual payload injection and pattern matching</li>
+        <li>Integrated BeautifulSoup, Requests, and Regex for HTML form parsing and response handling</li>
+        <li>Added support for crawling subdomains and analyzing query parameters</li>
+        <li>Highlighted vulnerable inputs with clear test results on the web interface</li>        
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>📊 Fraud Detection Using Machine Learning</h3>
+      <ul>
+        <li>Final year project to detect fraudulent transactions using classification algorithms</li>
+        <li>Used Python, Pandas, and Scikit-learn with preprocessing and feature engineering</li>
+        <li>Trained with Random Forest and Decision Tree models, achieving over 90% accuracy</li>
+        <li>Visualized results using ROC curve, confusion matrix, and precision-recall graphs</li>
+        <li>Recommended integration into financial platforms for real-time fraud flagging</li>
+    </div>
+  </section>
+
+  <section id="resume">
+    <h2>📄 Resume</h2>
+    <a href="https://drive.google.com/file/d/1I2LqaGcO2oC6mtI_c5i0UlKM8IJmKbNW/view?usp=drivesdk" class="resume-button" target="_blank">📄 View Resume</a>
+  </section>
+
+  <section id="certificates">
+    <h2>📜 Certificates</h2>
+    <ul>
+      <li><a href="https://drive.google.com/file/d/1Jes274zfIOBWEcAOA8-TLepkwLUjHrkd/view">Cybersecurity - FITA</a></li>
+      <li><a href="https://drive.google.com/file/d/1Jd79Jyk73j9dZhb4njzARn6X69Iqab1G/view">Internship - CODTECH</a></li>
+      <li><a href="https://drive.google.com/file/d/1JQRNHMxWjXPg_3CjWHDiyM5dWsvoYACM/view">Computer Vision - MathWorks</a></li>
+      <li><a href="https://drive.google.com/file/d/1JNvMaP7OxwQcs1QFtY7JzauXNRdIq7ae/view">MongoDB - ICT Academy</a></li>
+      <li><a href="https://drive.google.com/file/d/1BQoSioG98PMFa-hcbH5O6jhOXR7hbqQt/view">Ethical Hacking - Web App Hacking</a></li>
+      <li><a href="https://drive.google.com/file/d/1BSeW36Et5v55p2m1nTVwPpQj5Gab-hyH/view">Web Hacking - Cybrary</a></li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>🔗 Let’s connect</h2>
+    <p>
+      <a href="https://www.linkedin.com/in/arvind-cybersecurity/" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/aravind-pentest" target="_blank">GitHub</a>
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Aravind V | All Rights Reserved
+  </footer>
+
+  <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">⬆️ Top</button>
+
+  <script>
+    window.onscroll = () => {
+      const btn = document.getElementById("scrollTopBtn");
+      btn.style.display = (document.documentElement.scrollTop > 300) ? "block" : "none";
+    };
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll("section").forEach(sec => observer.observe(sec));
+  </script>
+</body>
+</html>
